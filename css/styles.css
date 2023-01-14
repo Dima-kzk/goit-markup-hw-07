@@ -42,16 +42,20 @@ p {
     margin: 0;
 }
 
-.img {
+img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .logo,
 .site-nav .link {
     color: var(--navy-blue);
-    text-decoration: none;
+
 
     display: inline-block;
     padding-bottom: 24px;
@@ -103,7 +107,12 @@ p {
     margin-right: auto;
 }
 
+.teame-list .list-gap {
+    max-width: 264px;
+}
+
 @media screen and (max-width: 767px) {
+
     .site-nav,
     .contacts {
         display: none;
@@ -465,6 +474,7 @@ p {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .team-list {
@@ -477,6 +487,7 @@ p {
 .card-content {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 32px;
     padding-bottom: 32px;
 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -493,11 +504,6 @@ p {
     margin-bottom: 72px;
 }
 
-.team-employee {
-    text-align: center;
-    margin-top: 32px;
-}
-
 .team-job {
     text-align: center;
     margin-top: 8px;
@@ -505,10 +511,13 @@ p {
 
 .social-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
+    /*
     max-width: 232px;
     margin-left: auto;
     margin-right: auto;
+*/
     margin-top: 8px;
 }
 
@@ -527,6 +536,7 @@ p {
 
     transition: background-color var(--transition-type);
 }
+
 container .social-link:hover,
 .social-link:focus {
     background-color: var(--green);
@@ -613,16 +623,35 @@ container .social-link:hover,
     color: var(--iris);
 }
 
+
+
 .footer {
     padding-top: 96px;
     padding-bottom: 96px;
 }
 
+.footer-block {}
+
+.footer-block-appeal {
+    max-width: 268px;
+}
+
+.footer-block-appeal,
+.footer-block-social {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+}
+
+
+
 .appeal {
+    /*
     max-width: 268px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
+*/
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
@@ -653,9 +682,11 @@ container .social-link:hover,
     background-color: var(--green);
 }
 
+/*
 .footer .social-list {
     margin-bottom: 72px;
 }
+*/
 
 /* Subscribe form */
 
@@ -813,7 +844,7 @@ container .social-link:hover,
 }
 
 .modal-form {
-    /* width: 100%; */
+    width: 100%;
     /* margin-left: auto;
     margin-right: auto; */
 }
@@ -1125,6 +1156,22 @@ container .social-link:hover,
 
 /*================ mobile styles ===============*/
 
+.hero {
+    background-position: center;
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+    .hero-text {
+        max-width: 368px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+
 @media screen and (min-width: 320px) {
     .social-link {
         width: 40px;
@@ -1140,11 +1187,8 @@ container .social-link:hover,
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.8), rgba(46, 47, 66, 0.8)),
             url(../images/mobile-Dark-bg.jpg);
-        background-position: center;
-        padding-top: 112px;
-        padding-bottom: 112px;
-        padding-left: 54px;
-        padding-right: 54px;
+
+
     }
 
     .hero-text {
@@ -1172,14 +1216,15 @@ container .social-link:hover,
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 767px) and (min-resolution: 192dpi),
-    screen and (max-width: 767px) and (min-resolution: 2dppx) {
+screen and (max-width: 767px) and (min-resolution: 192dpi),
+screen and (max-width: 767px) and (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/mobile-Dark-bg@2x.jpg);
     }
 }
 
 @media screen and (max-width: 1199px) {
+
     .features-svg,
     .product {
         display: none;
@@ -1261,7 +1306,7 @@ container .social-link:hover,
     }
 
     .hero-text {
-        width: 494px;
+        max-width: 494px;
         margin-bottom: 40px;
         font-size: 56px;
         line-height: calc(60 / 56);
@@ -1282,6 +1327,10 @@ container .social-link:hover,
         flex-basis: calc((100% - 24px) / 2);
     }
 
+    .features-title {
+        text-align: left;
+    }
+
     .modal {
         width: 408px;
     }
@@ -1289,6 +1338,8 @@ container .social-link:hover,
     /*  Our Team  */
 
     .team-list {
+        padding-left: 108px;
+        padding-right: 108px;
         column-gap: 24px;
         row-gap: 64px;
     }
@@ -1298,6 +1349,11 @@ container .social-link:hover,
     }
 
     /*  customers  */
+
+    .customers .container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
 
     .customers-list {
         column-gap: 24px;
@@ -1310,13 +1366,26 @@ container .social-link:hover,
 
     /*  footer  */
 
+    .footer .container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
     .footer-layout {
         display: flex;
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 72px;
-        padding-left: 92px;
-        padding-right: 92px;
+        /*        padding-left: 108px;*/
+        /*        padding-right: 108px;*/
+    }
+
+    .footer-block-appeal {
+        margin: 0;
+    }
+
+    .footer-block-social {
+        margin: 0;
     }
 
     .footer .logo {
@@ -1357,7 +1426,7 @@ container .social-link:hover,
         flex-wrap: nowrap;
         justify-content: center;
     }
-    
+
     .portfolio-img-size {
         width: 344px;
         height: auto;
@@ -1373,8 +1442,8 @@ container .social-link:hover,
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 768px) and (min-resolution: 192dpi),
-    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+screen and (min-width: 768px) and (min-resolution: 192dpi),
+screen and (min-width: 768px) and (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/tablet-Dark-bg@2x.jpg);
     }
@@ -1395,6 +1464,10 @@ container .social-link:hover,
     .logo,
     .site-nav .link {
         padding-bottom: 28px;
+    }
+
+    .header .container {
+        width: 1152px;
     }
 
     .header .contacts {
@@ -1430,6 +1503,11 @@ container .social-link:hover,
 
     /* features */
 
+    .features .container {
+        padding-left: 156px;
+        padding-right: 156px;
+    }
+
     .features-title {
         font-weight: 500;
         text-align: left;
@@ -1454,7 +1532,14 @@ container .social-link:hover,
 
     /* our team */
     .team-list {
+        padding-left: 0px;
+        padding-right: 0px;
         flex-wrap: nowrap;
+        column-gap: 24px;
+    }
+
+    .team-list .list-gap {
+        flex-basis: auto;
     }
 
     .team.section {
@@ -1480,6 +1565,14 @@ container .social-link:hover,
         gap: unset;
     }
 
+
+    .footer-block {
+        max-width: unset;
+        margin-left: unset;
+        margin-right: unset;
+        margin-bottom: unset;
+    }
+
     .social-margin {
         margin-left: 120px;
     }
@@ -1495,8 +1588,8 @@ container .social-link:hover,
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 1200px) and (min-resolution: 192dpi),
-    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+screen and (min-width: 1200px) and (min-resolution: 192dpi),
+screen and (min-width: 1200px) and (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(to right, #2e2f42b3, #2e2f42b3), url(../images/desktop-people-office@2x.jpg);
     }
